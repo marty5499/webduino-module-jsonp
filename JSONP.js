@@ -35,5 +35,14 @@
         return self._jsonList;
     }
 
+    proto.dataFilter = function(key,val,dataKey){
+        for(var i in self._jsonList){
+            var obj = self._jsonList[i];
+            if(obj[key]==val){
+                return obj[dataKey];
+            }
+        }
+        return "";
+    }
     scope.module.JSONP = JSONP;
 }));

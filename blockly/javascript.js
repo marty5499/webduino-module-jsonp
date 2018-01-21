@@ -25,6 +25,6 @@ Blockly.JavaScript['jsonp_data_by_key'] = function(block) {
     var text_key = block.getFieldValue('key');
     var text_value = block.getFieldValue('value');
     var text_data = block.getFieldValue('data');
-    //var code = variable_jsonp + '.dataFilter('++')';
+    var code = variable_jsonp + '.dataFilter("'+text_key+'","'+text_value+'","'+text_data+'")';
     return [code, Blockly.JavaScript.ORDER_NONE];
 };
