@@ -12,6 +12,15 @@
         </value>
     </block>
     <block type="jsonp_fetch">
+        <value name="VALUE">
+            <block type="variables_set">
+                <field name="VAR">jsonData</field>
+                <value name="VALUE">
+                    <block type="jsonp_data">
+                    </block>
+                </value>
+            </block>
+        </value>
     </block>
     <block type="variables_set">
         <field name="VAR">jsonData</field>
@@ -20,4 +29,5 @@
             </block>
         </value>
     </block>
+    <block type="jsonp_data_by_key"></block>
 </category>

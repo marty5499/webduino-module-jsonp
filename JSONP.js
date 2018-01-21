@@ -9,13 +9,13 @@
 
     var self;
     var proto;
-    var _fetchURL;
     var Module = scope.Module;
 
     function JSONP(fetchURL) {
         Module.call(this);
         self = this;
         self._fetchURL = fetchURL;
+        self._jsonList = [];
     }
 
     JSONP.prototype = proto = Object.create(Module.prototype, {
@@ -24,10 +24,16 @@
         }
     });
 
-    proto.fetch = function() {
+    proto.fetch = function(cb) {
         $.getJSON(self._fetchURL, function(json) {
-            console.log(json);
+            self._jsonList = json;
+            cb();
         });
     }
+
+    proto.data = function() {
+        return self._jsonList;
+    }
+
     scope.module.JSONP = JSONP;
 }));

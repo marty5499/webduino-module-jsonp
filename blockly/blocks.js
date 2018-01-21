@@ -29,7 +29,7 @@ Blockly.Blocks['jsonp_fetch'] = {
     }
 };
 
-
+//https://blockly-demo.appspot.com/static/demos/blockfactory_old/index.html#narpfi
 Blockly.Blocks['jsonp_data'] = {
     init: function() {
         this.appendDummyInput()
@@ -37,8 +37,29 @@ Blockly.Blocks['jsonp_data'] = {
             .appendField("JSON物件陣列");
         this.setInputsInline(true);
         this.setOutput(true, null);
-        this.setColour(230);
+        this.setColour(30);
         this.setTooltip('');
         this.setHelpUrl('https://webduino.io/');
     }
+};
+
+
+//https://blockly-demo.appspot.com/static/demos/blockfactory_old/index.html#mbr8uo
+Blockly.Blocks['jsonp_data_by_key'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldVariable("jsonp"), "jsonp")
+        .appendField("JSON物件陣列，找 ")
+        .appendField(new Blockly.FieldTextInput("Site"), "key")
+        .appendField("=")
+        .appendField(new Blockly.FieldTextInput("前鎮"), "value")
+        .appendField("取 Key=")
+        .appendField(new Blockly.FieldTextInput("PM25"), "data")
+        .appendField("的值");
+    this.setInputsInline(true);
+    this.setOutput(true, null);
+    this.setColour(30);
+    this.setTooltip('');
+    this.setHelpUrl('http://www.example.com/');
+  }
 };
