@@ -1,0 +1,23 @@
+<category id="catJSONP" tags="fly,mark1,smart">
+    <block type="variables_set">
+        <field name="VAR">jsonp</field>
+        <value name="VALUE">
+            <block type="jsonp_new">
+                <value name="url">
+                    <block type="text">
+                        <field name="TEXT">https://opendata.epa.gov.tw/ws/Data/ATM00625/?$format=json&callback=?</field>
+                    </block>
+                </value>
+            </block>
+        </value>
+    </block>
+    <block type="jsonp_fetch">
+    </block>
+    <block type="variables_set">
+        <field name="VAR">jsonData</field>
+        <value name="VALUE">
+            <block type="jsonp_data">
+            </block>
+        </value>
+    </block>
+</category>

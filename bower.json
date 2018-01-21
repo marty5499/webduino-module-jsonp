@@ -1,0 +1,19 @@
+{
+  "name": "webduino-module-jsonp",
+  "description": "JSONP Module for Webduino",
+  "main": "JSONP.js",
+  "authors": "",
+  "license": "MIT",
+  "keywords": [
+    "arduino",
+    "webduino",
+    "jsonp"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
