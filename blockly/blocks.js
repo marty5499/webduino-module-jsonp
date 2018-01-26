@@ -63,3 +63,21 @@ Blockly.Blocks['jsonp_data_by_key'] = {
     this.setHelpUrl('http://www.example.com/');
   }
 };
+
+Blockly.Blocks['jsonp_get_property'] = {
+    init: function() {
+      this.appendValueInput("obj")
+          .setCheck(null)
+          .appendField("物件");
+      this.appendValueInput("key")
+          .setCheck(null)
+          .appendField("，鍵為");
+      this.appendDummyInput()
+          .appendField("的值");
+      this.setInputsInline(true);
+      this.setOutput(true, null);
+      this.setColour(30);
+      this.setTooltip('');
+      this.setHelpUrl('http://www.example.com/');
+    }
+  };
