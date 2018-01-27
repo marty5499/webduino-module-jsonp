@@ -1,5 +1,5 @@
 {
-  "types": ["jsonp_new","jsonp_fetch","jsonp_data"],
+  "types": ["jsonp_new","jsonp_fetch","jsonp_data","jsonp_get_property"],
   "category": "toolbox",
   "scripts": [
     "blockly/blocks.js",

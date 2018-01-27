@@ -28,3 +28,10 @@ Blockly.JavaScript['jsonp_data_by_key'] = function(block) {
     var code = variable_jsonp + '.dataFilter("'+text_key+'","'+text_value+'","'+text_data+'")';
     return [code, Blockly.JavaScript.ORDER_NONE];
 };
+
+Blockly.JavaScript['jsonp_get_property'] = function(block) {
+    var value_obj = Blockly.JavaScript.valueToCode(block, 'obj', Blockly.JavaScript.ORDER_ATOMIC);
+    var value_key = Blockly.JavaScript.valueToCode(block, 'key', Blockly.JavaScript.ORDER_ATOMIC);
+    var code = value_obj + '[' + value_key + ']';
+    return [code, Blockly.JavaScript.ORDER_ATOMIC];
+  };

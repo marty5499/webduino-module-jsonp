@@ -21,4 +21,5 @@
         </value>
     </block>
     <block type="jsonp_data_by_key"></block>
+    <block type="jsonp_get_property"></block>
 </category>
